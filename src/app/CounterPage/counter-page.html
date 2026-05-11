@@ -1,0 +1,9 @@
+<div class="flex flex-col items-center gap-4">
+    <h1 class="text-2xl font-bold">Counter</h1>
+    <p class="text-lg">Count: {{ count() }}</p>
+    <div class="flex gap-2">
+        <button class="px-4 py-2 bg-blue-500 text-white rounded" (click)="increment()">Increment</button>
+        <button class="px-4 py-2 bg-red-500 text-white rounded" (click)="decrement()">Decrement</button>
+        <button class="px-4 py-2 bg-gray-500 text-white rounded" (click)="reset()">Reset</button>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="flex flex-col items-center gap-4">
+    <h1 class="text-2xl font-bold">Hero Page</h1>
+    <div>
+        <p class="font-bold">Name:</p>
+        <p class="text-xl font-semibold">{{ name() }}</p>
+        <p class="font-bold">Age:</p>
+        <p class="text-xl font-semibold">{{ age() }}</p>
+        <p class="font-bold">Description:</p>
+        <p class="text-lg">{{ description() }}</p>
+        <p class="font-bold">Capitalized name:</p>
+        <p class="text-lg">{{ name() | uppercase }}</p>
+    </div>
+
+    <div class="flex gap-2">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded" (click)="changeHero()">Change Hero</button>
+        <button class="bg-gray-500 text-white px-4 py-2 rounded" (click)="resetHero()">Reset Hero</button>
+        <button class="bg-gray-500 text-white px-4 py-2 rounded" (click)="updateAge()">Update Age</button>
+    </div>
+
+</div>
