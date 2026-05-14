@@ -1,20 +1,45 @@
+<nav class="bg-gray-900 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center justify-between h-16">
 
+            <!-- Logo / Title -->
+            <div class="text-white font-bold text-xl tracking-wide">
+                Anime App
+            </div>
 
-<nav class="p-2 bg-gray-800 text-white flex space-x-4">
-    <a
-        routerLink="/"
-        routerLinkActive="text-blue-500 underline"
-        [routerLinkActiveOptions]="{exact: true}">
-        Home
-    </a>
-    <a
-        routerLink="/hero"
-        routerLinkActive="text-red-500 underline">
-        Hero
-    </a>
-    <a
-        routerLink="/dragonball"
-        routerLinkActive="text-red-500 underline">
-        Dragon Ball
-    </a>
+            <!-- Navigation -->
+            <div class="flex items-center space-x-2">
+
+                <a
+                    routerLink="/"
+                    routerLinkActive="bg-blue-500 text-white"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    class="px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200">
+                    Home
+                </a>
+
+                <a
+                    routerLink="/hero"
+                    routerLinkActive="bg-red-500 text-white"
+                    class="px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200">
+                    Hero
+                </a>
+
+                <a
+                    routerLink="/dragonball"
+                    routerLinkActive="bg-orange-500 text-white"
+                    class="px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200">
+                    Dragon Ball
+                </a>
+
+                <a
+                    routerLink="/dragonballsuper"
+                    routerLinkActive="bg-yellow-500 text-black font-semibold"
+                    class="px-4 py-2 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition duration-200">
+                    Dragon Ball Super
+                </a>
+
+            </div>
+        </div>
+    </div>
 </nav>

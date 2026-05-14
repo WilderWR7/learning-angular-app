@@ -1,20 +1,96 @@
-<div class="flex flex-col items-center gap-4">
-    <h1 class="text-2xl font-bold">Hero Page</h1>
-    <div>
-        <p class="font-bold">Name:</p>
-        <p class="text-xl font-semibold">{{ name() }}</p>
-        <p class="font-bold">Age:</p>
-        <p class="text-xl font-semibold">{{ age() }}</p>
-        <p class="font-bold">Description:</p>
-        <p class="text-lg">{{ description() }}</p>
-        <p class="font-bold">Capitalized name:</p>
-        <p class="text-lg">{{ name() | uppercase }}</p>
-    </div>
+<div class="min-h-screen bg-gray-100 py-10 px-4">
+    <div class="max-w-5xl mx-auto bg-white shadow-lg rounded-2xl p-8">
 
-    <div class="flex gap-2">
-        <button class="bg-blue-500 text-white px-4 py-2 rounded" (click)="changeHero()">Change Hero</button>
-        <button class="bg-gray-500 text-white px-4 py-2 rounded" (click)="resetHero()">Reset Hero</button>
-        <button class="bg-gray-500 text-white px-4 py-2 rounded" (click)="updateAge()">Update Age</button>
-    </div>
+        <!-- Title -->
+        <div class="mb-8 text-center">
+            <h1 class="text-4xl font-extrabold text-blue-600">
+                Hero Page
+            </h1>
 
+            <p class="text-gray-500 mt-2">
+                Hero information dashboard
+            </p>
+        </div>
+
+        <!-- Content -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Hero Information -->
+            <div
+                class="bg-gray-50 p-6 rounded-xl border border-gray-200 space-y-5">
+
+                <div>
+                    <p class="text-sm uppercase tracking-wide text-gray-400">
+                        Name
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-gray-800 mt-1">
+                        {{ name() }}
+                    </h2>
+                </div>
+
+                <div>
+                    <p class="text-sm uppercase tracking-wide text-gray-400">
+                        Age
+                    </p>
+
+                    <h2 class="text-2xl font-bold text-blue-600 mt-1">
+                        {{ age() }}
+                    </h2>
+                </div>
+
+                <div>
+                    <p class="text-sm uppercase tracking-wide text-gray-400">
+                        Description
+                    </p>
+
+                    <p class="text-lg text-gray-700 mt-1 leading-relaxed">
+                        {{ description() }}
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Extra Info -->
+            <div
+                class="bg-gray-50 p-6 rounded-xl border border-gray-200 flex flex-col justify-between">
+
+                <div>
+                    <p class="text-sm uppercase tracking-wide text-gray-400">
+                        Capitalized Name
+                    </p>
+
+                    <h2
+                        class="text-3xl font-extrabold text-blue-600 mt-2 tracking-wide">
+                        {{ name() | uppercase }}
+                    </h2>
+                </div>
+
+                <!-- Actions -->
+                <div class="grid grid-cols-1 gap-3 mt-8">
+
+                    <button
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition duration-200 shadow-md"
+                        (click)="changeHero()">
+                        Change Hero
+                    </button>
+
+                    <button
+                        class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded-lg transition duration-200 shadow-md"
+                        (click)="updateAge()">
+                        Update Age
+                    </button>
+
+                    <button
+                        class="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition duration-200 shadow-md"
+                        (click)="resetHero()">
+                        Reset Hero
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
 </div>
