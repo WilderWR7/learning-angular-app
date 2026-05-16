@@ -1,36 +1,13 @@
-import { NgClass } from '@angular/common';
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CharacterList } from '../components/dragonball/character-list/character-list';
-
-interface Character {
-  id: number;
-  name: string;
-  power: number;
-}
+import { CharacterAdd } from '../components/dragonball/character-add/character-add';
+import { DragonBallService } from '../services/dragonball.service';
 
 @Component({
   templateUrl: './dragon-ball-super-page.html',
-  imports: [NgClass, CharacterList],
+  imports: [CharacterList, CharacterAdd],
   selector: 'app-dragon-ball-super-page',
 })
 export class DragonBallSuperPage {
-  name = signal('');
-  power = signal(0);
-  characters = signal<Character[]>([
-    { id: 1, name: 'Goku', power: 9000 },
-    { id: 2, name: 'Vegeta', power: 8500 },
-  ]);
-  addCharacter() {
-    if (!this.name() || this.power() <= 0) {
-      return;
-    }
-    const newCharacter: Character = {
-      id: this.characters().length + 1,
-      name: this.name(),
-      power: this.power(),
-    };
-    this.characters.update((chars) => [...chars, newCharacter]);
-    this.name.set('');
-    this.power.set(0);
-  }
+  public dragonBallService = inject(DragonBallService);
 }

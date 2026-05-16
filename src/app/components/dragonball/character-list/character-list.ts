@@ -12,5 +12,6 @@ interface Character {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CharacterList {
-  characters = input<Character[]>([]);
+  title = input.required<string>();
+  characters = input.required<Character[]>();
 }

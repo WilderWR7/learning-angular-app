@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { Character } from '../interfaces/character.interface';
 
 @Component({
   templateUrl: './dragon-ball-page.html',
